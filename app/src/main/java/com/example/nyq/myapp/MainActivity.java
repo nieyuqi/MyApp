@@ -1,12 +1,15 @@
 package com.example.nyq.myapp;
 
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Toast;
 
+import com.example.nyq.myapp.fragment.AddFragment;
+import com.example.nyq.myapp.fragment.SelectFragment;
 import com.special.ResideMenu.ResideMenu;
 import com.special.ResideMenu.ResideMenuItem;
 
@@ -24,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         setUpMenu();
+        changeFragment(new AddFragment());
     }
 
     private ResideMenu.OnMenuListener menuListener = new ResideMenu.OnMenuListener() {
@@ -54,6 +58,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         resideMenu.addMenuItem(selectItem, ResideMenu.DIRECTION_LEFT);
 
         addItem.setOnClickListener(this);
+        selectItem.setOnClickListener(this);
 
     }
 
@@ -65,8 +70,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         if (addItem == view) {
-
+            changeFragment(new AddFragment());
+        } else if (selectItem == view) {
+            changeFragment(new SelectFragment());
         }
 
+        resideMenu.closeMenu();
+
+    }
+
+    private void changeFragment(Fragment fragment) {
+        getSupportFragmentManager().beginTransaction().replace(R.id.main_fragment, fragment).commit();
     }
 }
