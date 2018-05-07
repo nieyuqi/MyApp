@@ -3,4 +3,9 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="device_info_left_tvcolor">#4A4A4A</color>
+    <color name="cuosor_color">#017EE1</color>
+    <color name="division">#e5e6e7</color>
+    <color name="login_button_color">#80bef0</color>
+    <color name="white">#FFFFFF</color>
 </resources>

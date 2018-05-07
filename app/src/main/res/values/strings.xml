@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">MyApp</string>
+    <string name="add_data">添加数据</string>
+    <string name="brand_name">品牌</string>
+    <string name="please_brand">请输入品牌</string>
+    <string name="mode">型号</string>
+    <string name="please_mode">请输入型号</string>
+    <string name="color">颜色</string>
+    <string name="please_color">请输入颜色</string>
+    <string name="save">保存</string>
 </resources>

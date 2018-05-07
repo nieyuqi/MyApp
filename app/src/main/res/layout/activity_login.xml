@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="20dp"
+    android:orientation="vertical">
+
+    <com.example.nyq.myapp.MyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:text="@string/add_data"
+                android:textColor="#017EE1"
+                android:textSize="18sp" />
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/device_info_right_margin_left"
+                android:layout_marginRight="@dimen/device_info_right_margin_right"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/api_key"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/brand_name"
+                    android:textColor="@color/device_info_left_tvcolor"
+                    android:textSize="@dimen/device_info_textsize" />
+
+                <EditText
+                    android:id="@+id/brand_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/api_key_left"
+                    android:layout_toRightOf="@+id/api_key"
+                    android:background="@null"
+                    android:hint="@string/please_brand"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:textSize="@dimen/device_info_textsize" />
+
+                <View
+
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/api_key"
+                    android:layout_marginTop="25dp"
+                    android:background="@color/division" />
+
+                <ImageView
+                    android:id="@+id/api_key_del"
+                    android:layout_width="@dimen/delete_icon_width"
+                    android:layout_height="@dimen/delete_icon_width"
+                    android:layout_alignBaseline="@id/api_key"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/delete"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/device_info_right_margin_left"
+                android:layout_marginRight="@dimen/device_info_right_margin_right"
+                android:layout_marginTop="17dp">
+
+                <TextView
+                    android:id="@+id/partner_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/mode"
+                    android:textColor="@color/device_info_left_tvcolor"
+                    android:textSize="@dimen/device_info_textsize" />
+
+                <EditText
+                    android:id="@+id/mode_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/api_key_left"
+                    android:layout_toRightOf="@+id/partner_code"
+                    android:background="@null"
+                    android:hint="@string/please_mode"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:textSize="@dimen/device_info_textsize" />
+
+                <ImageView
+                    android:id="@+id/partner_code_del"
+                    android:layout_width="@dimen/delete_icon_width"
+                    android:layout_height="@dimen/delete_icon_width"
+                    android:layout_alignBaseline="@id/partner_code"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/delete"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/partner_code"
+                    android:layout_marginTop="25dp"
+                    android:background="@color/division" />
+            </RelativeLayout>
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/device_info_right_margin_left"
+                android:layout_marginRight="@dimen/device_info_right_margin_right"
+                android:layout_marginTop="17dp">
+
+                <TextView
+                    android:id="@+id/channel_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/color"
+                    android:textColor="@color/device_info_left_tvcolor"
+                    android:textSize="@dimen/device_info_textsize" />
+
+                <EditText
+                    android:id="@+id/channel_code_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/api_key_left"
+                    android:layout_toRightOf="@+id/channel_code"
+                    android:background="@null"
+                    android:hint="@string/please_color"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:textSize="@dimen/device_info_textsize" />
+
+                <ImageView
+                    android:id="@+id/channel_code_del"
+                    android:layout_width="@dimen/delete_icon_width"
+                    android:layout_height="@dimen/delete_icon_width"
+                    android:layout_alignBaseline="@id/channel_code"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/delete"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/channel_code"
+                    android:layout_marginTop="25dp"
+                    android:background="@color/division" />
+            </RelativeLayout>
+
+
+            <Button
+                android:id="@+id/login_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/device_info_right_margin_left"
+                android:layout_marginRight="@dimen/device_info_right_margin_right"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/login_button_shape"
+                android:text="@string/save"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </com.example.nyq.myapp.MyScrollView>
+
+</LinearLayout>
