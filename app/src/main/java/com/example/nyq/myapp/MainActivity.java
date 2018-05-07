@@ -1,5 +1,6 @@
 package com.example.nyq.myapp;
 
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
@@ -13,6 +14,8 @@ import com.example.nyq.myapp.fragment.SelectFragment;
 import com.special.ResideMenu.ResideMenu;
 import com.special.ResideMenu.ResideMenuItem;
 
+import org.litepal.tablemanager.Connector;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private ResideMenu resideMenu;
@@ -25,9 +28,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         //状态栏
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
         setUpMenu();
         changeFragment(new AddFragment());
+
+        SQLiteDatabase database = Connector.getDatabase();
     }
 
     private ResideMenu.OnMenuListener menuListener = new ResideMenu.OnMenuListener() {

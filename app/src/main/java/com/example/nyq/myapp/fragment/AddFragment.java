@@ -12,7 +12,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.dommy.qrcode.ZingMainActivity;
 import com.dommy.qrcode.util.Constant;
 import com.example.nyq.myapp.R;
 import com.google.zxing.activity.CaptureActivity;
@@ -33,7 +32,7 @@ public class AddFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.add_fragment2, container, false);
 
-        ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.CAMERA,Manifest.permission.READ_EXTERNAL_STORAGE}, Constant.REQ_PERM_CAMERA);
+        ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.CAMERA, Manifest.permission.READ_EXTERNAL_STORAGE}, Constant.REQ_PERM_CAMERA);
 
         initView(view);
         return view;
@@ -45,6 +44,7 @@ public class AddFragment extends Fragment implements View.OnClickListener {
 
         tvResult = (TextView) view.findViewById(com.dommy.qrcode.R.id.txt_result);
     }
+
     // 开始扫码
     private void startQrCode() {
 
@@ -52,11 +52,14 @@ public class AddFragment extends Fragment implements View.OnClickListener {
         Intent intent = new Intent(getContext(), CaptureActivity.class);
         startActivityForResult(intent, Constant.REQ_QR_CODE);
     }
+
     @Override
     public void onClick(View view) {
         int i = view.getId();
         if (i == com.dommy.qrcode.R.id.btn_qrcode) {
-            startQrCode();
+//            startQrCode();
+//            SQLiteDatabase database = Connector.getDatabase();
+
 
         }
     }
