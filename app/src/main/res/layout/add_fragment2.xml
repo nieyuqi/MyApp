@@ -21,4 +21,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="扫描结果" />
+
+    <Button
+        android:text="生成二维码"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/prod_zing"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/zing_iv"/>
 </LinearLayout>

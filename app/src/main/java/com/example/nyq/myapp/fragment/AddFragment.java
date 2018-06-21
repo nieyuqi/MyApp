@@ -10,8 +10,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.ZXingUtils;
 import com.dommy.qrcode.util.Constant;
 import com.example.nyq.myapp.R;
 import com.google.zxing.activity.CaptureActivity;
@@ -26,6 +28,8 @@ public class AddFragment extends Fragment implements View.OnClickListener {
 
     Button btnQrCode; // 扫码
     TextView tvResult; // 结果
+    private Button prodZing;
+    private ImageView zingIv;
 
     @Nullable
     @Override
@@ -40,7 +44,12 @@ public class AddFragment extends Fragment implements View.OnClickListener {
 
     private void initView(View view) {
         btnQrCode = (Button) view.findViewById(com.dommy.qrcode.R.id.btn_qrcode);
+        prodZing = (Button) view.findViewById(R.id.prod_zing);
+        zingIv = (ImageView) view.findViewById(R.id.zing_iv);
+
         btnQrCode.setOnClickListener(this);
+        prodZing.setOnClickListener(this);
+
 
         tvResult = (TextView) view.findViewById(com.dommy.qrcode.R.id.txt_result);
     }
@@ -55,12 +64,18 @@ public class AddFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
-        int i = view.getId();
-        if (i == com.dommy.qrcode.R.id.btn_qrcode) {
-//            startQrCode();
-//            SQLiteDatabase database = Connector.getDatabase();
+
+        switch (view.getId()) {
+            case R.id.prod_zing:
 
 
+                zingIv.setImageBitmap(ZXingUtils.createQRImage("www.", 500, 500));
+                break;
+
+            case R.id.btn_qrcode:
+
+                startQrCode();
+                break;
         }
     }
 
