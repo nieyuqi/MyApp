@@ -11,9 +11,9 @@ import java.util.List;
 public interface IProdService {
 
     List<ProductBean> findProd(ProductBean productBean);
-    boolean deleteProd(ProductBean productBean);
+    int deleteProd(ProductBean productBean);
     boolean addProd(ProductBean productBean);
-    void update(ProductBean oldProd,ProductBean newProd);
+    int update(ProductBean oldProd, ProductBean newProd);
 
 
 

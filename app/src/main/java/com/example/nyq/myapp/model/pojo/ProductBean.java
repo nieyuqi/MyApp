@@ -11,14 +11,12 @@ public class ProductBean extends DataSupport{
    private String price;
    private long time;
    private String code;
-   private int age;
 
-    public ProductBean(String name, String price, long time, String code, int age) {
+    public ProductBean(String name, String price, long time, String code) {
         this.name = name;
         this.price = price;
         this.time = time;
         this.code = code;
-        this.age = age;
     }
 
     public ProductBean() {

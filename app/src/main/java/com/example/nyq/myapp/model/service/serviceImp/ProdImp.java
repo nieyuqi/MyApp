@@ -1,5 +1,7 @@
 package com.example.nyq.myapp.model.service.serviceImp;
 
+import android.content.ContentValues;
+
 import com.example.nyq.myapp.model.pojo.ProductBean;
 import com.example.nyq.myapp.model.service.IProdService;
 
@@ -22,6 +24,7 @@ public class ProdImp implements IProdService {
 
         return prodImp;
     }
+
     @Override
     public List<ProductBean> findProd(ProductBean productBean) {
 
@@ -36,21 +39,32 @@ public class ProdImp implements IProdService {
     }
 
     @Override
-    public boolean deleteProd(ProductBean productBean) {
-        return false;
+    public int deleteProd(ProductBean productBean) {
+
+        int lines = DataSupport.deleteAll("code=?", productBean.getCode());
+
+        return lines;
     }
 
     @Override
     public boolean addProd(ProductBean productBean) {
         if (productBean != null) {
-           return productBean.save();
+            return productBean.save();
         }
 
         return false;
     }
 
     @Override
-    public void update(ProductBean oldProd, ProductBean newProd) {
+    public int update(ProductBean oldProd, ProductBean newProd) {
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("name", newProd.getName());
+        contentValues.put("price", newProd.getPrice());
+        contentValues.put("time", System.currentTimeMillis());
+        contentValues.put("code", newProd.getCode());
 
+        int line = DataSupport.updateAll(ProductBean.class, contentValues, "code=?", oldProd.getCode());
+
+        return line;
     }
 }
