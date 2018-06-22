@@ -2,9 +2,9 @@
 <litepal>
     <dbname value="demo" />
 
-    <version value="1" />
+    <version value="7" />
 
     <list>
-        <mapping class="com.example.nyq.myapp.litepalbean.ProductBean" />
+        <mapping class="com.example.nyq.myapp.model.pojo.ProductBean" />
     </list>
 </litepal>

@@ -1,4 +1,4 @@
-package com.example.nyq.myapp;
+package com.example.nyq.myapp.view;
 
 import android.content.Context;
 import android.util.AttributeSet;

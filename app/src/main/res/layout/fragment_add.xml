@@ -5,7 +5,7 @@
     android:layout_marginTop="20dp"
     android:orientation="vertical">
 
-    <com.example.nyq.myapp.MyScrollView
+    <com.example.nyq.myapp.view.MyScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true">
@@ -176,6 +176,6 @@
                 android:textColor="@color/white"
                 android:textSize="18sp" />
         </LinearLayout>
-    </com.example.nyq.myapp.MyScrollView>
+    </com.example.nyq.myapp.view.MyScrollView>
 
 </LinearLayout>

@@ -1,4 +1,4 @@
-package com.example.nyq.myapp;
+package com.example.nyq.myapp.view;
 
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -9,8 +9,9 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Toast;
 
-import com.example.nyq.myapp.fragment.AddFragment;
-import com.example.nyq.myapp.fragment.SelectFragment;
+import com.example.nyq.myapp.R;
+import com.example.nyq.myapp.view.fragment.AddFragment;
+import com.example.nyq.myapp.view.fragment.SelectFragment;
 import com.special.ResideMenu.ResideMenu;
 import com.special.ResideMenu.ResideMenuItem;
 

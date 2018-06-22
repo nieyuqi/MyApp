@@ -1,4 +1,4 @@
-package com.example.nyq.myapp.fragment;
+package com.example.nyq.myapp.view.fragment;
 
 import android.Manifest;
 import android.content.Intent;
@@ -24,7 +24,7 @@ import static android.app.Activity.RESULT_OK;
  * Created by nyq on 2018/5/3.
  */
 
-public class AddFragment extends Fragment implements View.OnClickListener {
+public class AddFragment2 extends Fragment implements View.OnClickListener {
 
     Button btnQrCode; // 扫码
     TextView tvResult; // 结果
@@ -70,6 +70,8 @@ public class AddFragment extends Fragment implements View.OnClickListener {
 
 
                 zingIv.setImageBitmap(ZXingUtils.createQRImage("www.", 500, 500));
+
+
                 break;
 
             case R.id.btn_qrcode:
