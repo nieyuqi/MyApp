@@ -28,7 +28,4 @@ public final class R {
         public static int residemenu_custom_right_scrollview = 0x7f0f0003;
         public static int residemenu_item = 0x7f0f0004;
     }
-    public static final class string {
-        public static int app_name = 0x7f150001;
-    }
 }

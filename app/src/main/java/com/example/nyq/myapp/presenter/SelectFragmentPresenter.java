@@ -20,12 +20,10 @@ public class SelectFragmentPresenter {
         prodService = new ProdImp();
     }
 
-    public List<ProductBean> selectProd(ProductBean productBean){
+    public List<ProductBean> selectProd(ProductBean productBean) {
         List<ProductBean> prod = prodService.findProd(productBean);
 
-        if (prod != null && prod.size() > 0) {
-            initProdInfo(prod.get(0));
-        }
+        initProdInfo(prod);
         return prod;
     }
 
@@ -40,7 +38,7 @@ public class SelectFragmentPresenter {
         }
     }
 
-    private void initProdInfo(ProductBean productBean) {
+    private void initProdInfo(List<ProductBean> productBean) {
         seletFragmentView.initProdInfo(productBean);
     }
 

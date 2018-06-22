@@ -9,12 +9,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.dommy.qrcode.util.Constant;
 import com.example.nyq.myapp.R;
 import com.example.nyq.myapp.model.pojo.ProductBean;
-import com.example.nyq.myapp.model.service.serviceImp.ProdImp;
-import com.example.nyq.myapp.presenter.AddFragmentPresenter;
 import com.example.nyq.myapp.presenter.IQRPresenter;
 import com.example.nyq.myapp.presenter.SelectFragmentPresenter;
 import com.example.nyq.myapp.view.ISeletFragmentView;
@@ -84,7 +83,6 @@ public class SelectFragment extends Fragment implements View.OnClickListener, IS
                 getSelectFragmentPresenter().selectProd(productBean);
 
 
-
                 break;
             case R.id.scan_code_button:
                 IQRPresenter iqrPresenter = new IQRPresenter(this);
@@ -128,11 +126,13 @@ public class SelectFragment extends Fragment implements View.OnClickListener, IS
     }
 
     @Override
-    public void initProdInfo(ProductBean productBean) {
-        if (productBean != null) {
-            prodCodingEdit.setText(productBean.getCode());
-            prodNameEdit.setText(productBean.getName());
-            prodPriceEdit.setText(productBean.getPrice());
+    public void initProdInfo(List<ProductBean> productBean) {
+        if (productBean != null && productBean.size() > 0) {
+            prodCodingEdit.setText(productBean.get(0).getCode());
+            prodNameEdit.setText(productBean.get(0).getName());
+            prodPriceEdit.setText(productBean.get(0).getPrice());
+        } else {
+            Toast.makeText(getContext(), R.string.no_data, Toast.LENGTH_SHORT).show();
         }
     }
 }

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MyApp</string>
+    <string name="app_name">成</string>
     <string name="add_data">添加数据</string>
     <string name="brand_name">品牌</string>
     <string name="please_brand">请输入品牌</string>
@@ -19,4 +19,5 @@
     <string name="update">修改</string>
     <string name="delete">删除</string>
     <string name="select">查询</string>
+    <string name="no_data">无数据</string>
 </resources>
